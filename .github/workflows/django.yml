@@ -28,6 +28,9 @@ jobs:
     - name: Check Migrations
       run: |
         make migrate
+    - name: Check Linters
+      run: |
+        flake8 apps
     - name: Run Tests
       run: |
         python manage.py test
