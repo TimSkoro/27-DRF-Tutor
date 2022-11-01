@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block content_block %}
+    {% for i in some_list %}
+        <p class="four">
+        <p class="three">
+        <h3 style="color: {{ i.title_color }}">{{ i.title }}</h3>
+        </p>
+        <p class="three">{{ i.content }}</p>
+        <p class="three">{{ i.date }}</p>
+        <img src="{{ i.images }}" alt="Mountains" width="600" height="400">
+        </p>
+    {% endfor %}
+{% endblock %}
+
+
+{% block header_block %}
+    <h2>News</h2>
+    <p>News page</p>
+{% endblock %}
